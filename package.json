@@ -1,0 +1,50 @@
+{
+	"name": "elefrant-oauth2",
+	"version": "0.2.0",
+	"description": "Component to implement an OAuth2 Server/Provider.",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/elefrant scaffold/elefrant-oauth2"
+	},
+	"author": "elefrant scaffold",
+	"maintainers": [{
+		"name": "elefrant scaffold",
+		"email": "elefrant scaffold email",
+		"url": "elefrant scaffold url"
+	}],
+	"main": "component",
+	"keywords": [
+		"elefrant-oauth2",
+		"elefrantOauth2",
+		"oauth2",
+		"elefrant",
+		"elefrant.com",
+		"elefrant.io",
+		"component"
+	],
+	"scripts": {
+		"test": "node node_modules/grunt-cli/bin/grunt"
+	},
+	"engines": {
+		"node": ">=0.10.0",
+		"npm": ">=1.4.x",
+		"elefrant": ">=0.2.x"
+	},
+	"dependencies": {
+		"oauth2-server-restify": "~2.3.0"
+	},
+	"devDependencies": {
+		"grunt-cli": "~0.1.13",
+		"grunt-contrib-jshint": "~0.10.0",
+		"grunt-mocha-test": "~0.10.0",
+		"grunt": "~0.4.0",
+		"mocha": "~1.18.2",
+		"should": "~3.2.0"
+	},
+	"readmeFilename": "readme.md",
+	"bugs": {
+		"url": "https://github.com/elefrant scaffold/elefrant-oauth2/issues"
+	},
+	"homepage": "https://github.com/elefrant scaffold/elefrant-oauth2"
+}
