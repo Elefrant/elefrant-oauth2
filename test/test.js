@@ -1,11 +1,27 @@
 'use strict';
 
-var should = require('should');
+var component = require('../component'),
+		restify = require('restify'),
+		should = require('should');
 
+var server = restify.createServer();
 
-describe('testing group', function () {
+describe('oAuth2', function () {
 
-	it('elefrant-oauth2 test', function () {
-		should.exist(should);
+	it('exports an object', function () {
+		should.exist(component);
+	});
+
+	it('check afterServer', function () {
+		console.log(component.afterServer({}, server));
+		should(component.afterServer({}, server)).be.ok;
+	});
+
+	it('check beforeRoute', function () {
+		should(component.afterServer({}, server)).be.ok;
+	});
+
+	it('check paramRoute', function () {
+		should(component.paramRoute({})).be.an.Object;
 	});
 });

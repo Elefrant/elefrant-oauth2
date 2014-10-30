@@ -10,16 +10,20 @@ module.exports = {
 	name: name,
 
 	afterServer: function (elefrant, server) {
-		oauth2(elefrant, server, name);
+		return oauth2(elefrant, server, name);
 	},
 
 	beforeRoute: function (elefrant, server) {
-		routes(server);
+		return routes(server);
 	},
 
 	paramRoute: function (elefrant, route) {
-		return {
-			oauth: route.oauth !== undefined ? route.oauth : true
-		};
+		if(route) {
+			return {
+				oauth: route.oauth !== undefined ? route.oauth : true
+			};
+		} else {
+			return {};
+		}
 	}
 };
