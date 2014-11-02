@@ -13,7 +13,6 @@ describe('oAuth2', function () {
 	});
 
 	it('check afterServer', function () {
-		console.log(component.afterServer({}, server));
 		should(component.afterServer({}, server)).be.ok;
 	});
 

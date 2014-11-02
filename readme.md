@@ -27,6 +27,13 @@ module.exports = [{
 ```
 
 
+## Dependable components
+
+**elefrant-template-engine**
+
+**elefrant-session**
+
+
 ## Structure
 
 ### Config `/config/`

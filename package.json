@@ -5,13 +5,13 @@
 	"license": "MIT",
 	"repository": {
 		"type": "git",
-		"url": "git://github.com/elefrant scaffold/elefrant-oauth2"
+		"url": "git://github.com/Elefrant/elefrant-oauth2"
 	},
-	"author": "elefrant scaffold",
+	"author": "Marcos Sanz <marcos.sanz@13genius.com>",
 	"maintainers": [{
-		"name": "elefrant scaffold",
-		"email": "elefrant scaffold email",
-		"url": "elefrant scaffold url"
+		"name": "Marcos Sanz",
+		"email": "marcos.sanz@13genius.com",
+		"url": "http://www.mistersanz.com"
 	}],
 	"main": "component",
 	"keywords": [
@@ -32,7 +32,9 @@
 		"elefrant": ">=0.2.x"
 	},
 	"dependencies": {
-		"oauth2-server-restify": "~2.3.0"
+		"oauth2-server-restify": "~2.3.0",
+		"mime": "~1.2.11",
+		"filed": "~0.1.0"
 	},
 	"devDependencies": {
 		"grunt-cli": "~0.1.13",
@@ -45,7 +47,7 @@
 	},
 	"readmeFilename": "readme.md",
 	"bugs": {
-		"url": "https://github.com/elefrant scaffold/elefrant-oauth2/issues"
+		"url": "https://github.com/Elefrant/elefrant-oauth2/issues"
 	},
-	"homepage": "https://github.com/elefrant scaffold/elefrant-oauth2"
+	"homepage": "https://github.com/Elefrant/elefrant-oauth2"
 }

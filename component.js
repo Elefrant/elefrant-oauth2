@@ -13,14 +13,14 @@ module.exports = {
 		return oauth2(elefrant, server, name);
 	},
 
-	beforeRoute: function (elefrant, server) {
-		return routes(server);
+	beforeRoute: function (elefrant, server, restify) {
+		return routes(elefrant, server, name, restify);
 	},
 
 	paramRoute: function (elefrant, route) {
 		if(route) {
 			return {
-				oauth: route.oauth !== undefined ? route.oauth : true
+				oauth: route.oauth !== undefined ? route.oauth : false
 			};
 		} else {
 			return {};
