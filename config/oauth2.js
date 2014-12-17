@@ -31,6 +31,12 @@ module.exports = {
     /*
      * Regex to match auth codes against before checking model
      */
-    clientIdRegex: /^[a-z0-9-_]{3,40}$/i
+    clientIdRegex: /^[a-z0-9-_]{3,40}$/i,
+
+    /*
+     * Templates for login and authorise
+     */
+    loginTemplate: './components/elefrant-oauth2/templates/login.html',
+    authoriseTemplate: './components/elefrant-oauth2/templates/authorise.html'
 
 };

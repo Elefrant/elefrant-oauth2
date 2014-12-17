@@ -1,0 +1,6 @@
+{
+	"dependencies": {
+		"elefrant-template-engine": "latest",
+		"elefrant-session": "latest"
+	}
+}

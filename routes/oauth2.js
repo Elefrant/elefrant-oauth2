@@ -1,14 +1,17 @@
 'use strict';
 
-var configDefault = require('../config/oauth2');
-var filed = require('filed');
-var mime = require('mime');
+var configDefault = require('../config/oauth2'),
+    models = require('../lib/models'),
+    filed = require('filed'),
+    mime = require('mime');
 
 module.exports = function (elefrant, server, name, restify) {
     var config = configDefault;
     if (elefrant && elefrant.getConfigComp) {
         config = elefrant.getConfigComp(name, configDefault);
     }
+
+    var model = models(elefrant);
 
     server.post('/oauth/token', server.oauth.grant());
 
@@ -19,7 +22,7 @@ module.exports = function (elefrant, server, name, restify) {
             req.query.client_id + '&redirect_uri=' + req.query.redirect_uri);
         }
 
-        res.render('./components/elefrant-oauth2/templates/authorise.html', {
+        res.render(config.authoriseTemplate, {
             client_id: req.query.client_id,
             redirect_uri: req.query.redirect_uri
         });
@@ -44,7 +47,8 @@ module.exports = function (elefrant, server, name, restify) {
 
     // Show login
     server.get('/login', function (req, res, next) {
-        res.render('./components/elefrant-oauth2/templates/login.html', {
+        res.render(config.loginTemplate, {
+            apiName: elefrant.name,
             redirect: req.query.redirect,
             client_id: req.query.client_id,
             redirect_uri: req.query.redirect_uri

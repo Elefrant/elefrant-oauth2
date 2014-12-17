@@ -17,7 +17,7 @@ describe('oAuth2', function () {
 	});
 
 	it('check beforeRoute', function () {
-		should(component.afterServer({}, server)).be.ok;
+		should(component.beforeRoute({}, server)).be.ok;
 	});
 
 	it('check paramRoute', function () {

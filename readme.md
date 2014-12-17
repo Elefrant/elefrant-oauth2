@@ -40,6 +40,15 @@ module.exports = [{
 
 Copy `oauth2.js` from `./components/elefrant-oauth2` to main config folder.
 
+*note:* in `config/server` the property
+```js
+...
+bodyParser: {
+	mapParams: false
+},
+...
+```
+
 
 #### Grants
 
