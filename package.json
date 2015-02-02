@@ -32,9 +32,10 @@
 		"elefrant": ">=0.2.x"
 	},
 	"dependencies": {
-		"oauth2-server-restify": "~2.3.0",
+		"oauth2-server-restify": "~2.3.1",
 		"mime": "~1.2.11",
-		"filed": "~0.1.0"
+		"filed": "~0.1.0",
+		"redis": "0.12.x"
 	},
 	"devDependencies": {
 		"grunt-cli": "~0.1.13",

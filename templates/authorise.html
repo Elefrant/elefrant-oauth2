@@ -27,18 +27,16 @@
 
 <div class="container">
 
-    <form class="form-signin" role="form" action="" enctype="multipart/form-data" method="post">
-        <h2 class="form-signin-heading">Authorise to {{ apiName }}</h2>
-        <label for="inputEmail" class="sr-only">Username/Email address</label>
-        <input type="text" id="inputEmail" class="form-control" placeholder="Username/Email" required autofocus>
-        <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-        <div class="checkbox">
-            <label>
-                <input type="checkbox" value="remember-me"> Remember me
-            </label>
-        </div>
+    <form class="form-signin" role="form" method="post">
+        <h2 class="form-signin-heading">Authorise to {{ name }}</h2>
+        <p>Do you want to access to the client?</p>
+        <input type="hidden" name="id" value="{{ id }}">
+        <input type="hidden" name="redirect" value="{{ redirect }}">
+        <input type="hidden" name="client_id" value="{{ client_id }}">
+        <input type="hidden" name="redirect_uri" value="{{ redirect_uri }}">
+        <input type="hidden" name="allow" value="yes">
         <button class="btn btn-lg btn-primary btn-block" type="submit">Authorise</button>
+        <a class="btn btn-lg btn-default btn-block" href="/oauth/authorise/cancel">Cancel</a>
     </form>
 
 </div> <!-- /container -->
